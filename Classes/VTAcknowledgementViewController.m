@@ -46,12 +46,7 @@
 - (void)loadView
 {
     UITextView *textView = [[UITextView alloc] initWithFrame:CGRectZero];
-    if ([UIFont respondsToSelector:@selector(preferredFontForTextStyle:)]) {
-        textView.font = [UIFont preferredFontForTextStyle:UIFontTextStyleBody];
-    }
-    else {
-        textView.font = [UIFont systemFontOfSize:17];
-    }
+    textView.font = [UIFont fontWithName:@"Menlo" size:13];
     textView.alwaysBounceVertical = YES;
     textView.text                 = self.text;
 #if !TARGET_OS_TV
